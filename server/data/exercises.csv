@@ -1,0 +1,8 @@
+name,type,level,equipment,sets,reps,duration
+Jumping Jacks,warmup,all,bodyweight,,,2 min
+Arm Circles,warmup,all,bodyweight,2,15,
+Push-up,main,beginner,bodyweight,3,12,
+Dumbbell Chest Press,main,intermediate,dumbbell,3,10,
+Resistance Band Row,main,intermediate,resistance_band,3,12,
+Child's Pose,cooldown,all,none,,,1 min
+Chest Stretch,cooldown,all,none,,,30 sec each side
