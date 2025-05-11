@@ -5,7 +5,7 @@ FitMate is a web app that generates personalized workout plans, lets users track
 
 ## 🔗 Deployed Link
 
-[Visit FitMate](https://taskified-frontend.netlify.app/)
+[Visit FitMate](https://fitmate-workout-planner.netlify.app/)
 
 [Live Web API](https://fitmate-workout-planner.onrender.com/)
 
