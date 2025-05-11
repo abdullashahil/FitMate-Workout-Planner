@@ -7,6 +7,7 @@ FitMate is a web app that generates personalized workout plans, lets users track
 ## 🔗 Deployed Link
 
 [Visit FitMate](https://taskified-frontend.netlify.app/)
+
 [Live Web API](https://fitmate-workout-planner.onrender.com/)
 
 ## **Key Features:**
@@ -27,13 +28,13 @@ The backend of the project is built with **Python FastAPI**. Here are the instru
 ### **1. Clone the repository:**
 ```bash
 git clone https://github.com/abdullashahil/FitMate-Workout-Planner
-cd workout-plan-generator
+cd server
 ```
 
 ### **2. Install dependencies:**
 Make sure you have Python 3.7+ installed, then install the required dependencies by running:
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### **3. Environment Variables:**
