@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import ProfileForm from '../components/ProfileForm';
 import PlanDisplay from '../components/PlanDisplay';
+import { toast } from 'sonner';
 
 export default function Home() {
   const [plan, setPlan] = useState(null);
@@ -14,12 +15,13 @@ export default function Home() {
     setError('');
     try {
       setProfileData(data);
-      console.log(data)
-      const response = await axios.post('http://127.0.0.1:8000/generate', data);
-      console.log(response)
+      const response = await axios.post('https://fitmate-workout-planner.onrender.com/generate', data);
       setPlan(response.data.plan);
+      toast.success("Workout plan generated successfully!");
     } catch (err) {
       setError(err.response?.data?.detail || err.message);
+      toast.error(`Error: ${err.response?.data?.detail || err.message}`);
+
     } finally {
       setLoading(false);
     }
