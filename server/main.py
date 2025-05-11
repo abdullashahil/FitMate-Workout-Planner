@@ -1,4 +1,3 @@
-# workout_generator/main.py
 from fastapi import FastAPI, HTTPException, Body
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -57,7 +56,6 @@ def create_plan(profile: UserProfile):
 @app.post("/export")
 def export_workout(plan_obj: dict = Body(...)):
     try:
-        # Generate a unique filename for each export
         filename = f"{uuid.uuid4().hex}_workout_plan.pdf"
         pdf_path = generate_pdf(plan_obj["plan"], filename)
         return FileResponse(path=pdf_path, filename=filename, media_type="application/pdf")

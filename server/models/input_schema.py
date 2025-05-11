@@ -1,4 +1,3 @@
-# models/input_schema.py
 from pydantic import BaseModel, Field
 from typing import List, Optional, Literal
 
@@ -10,7 +9,7 @@ class UserProfile(BaseModel):
     experience: str
     equipment: List[str] = Field(..., min_items=1)
     days_per_week: int = Field(..., ge=1, le=7)
-    custom_section_type: Optional[Literal["circuit", "superset"]] = None  # User chooses
+    custom_section_type: Optional[Literal["circuit", "superset"]] = None
 
 class Exercise(BaseModel):
     name: str
@@ -24,7 +23,7 @@ class SessionSection(BaseModel):
     warmup: List[Exercise]
     main: List[Exercise]
     cooldown: List[Exercise]
-    custom: Optional[List[Exercise]] = None  # Simplified custom section
+    custom: Optional[List[Exercise]] = None 
 
 class WorkoutSession(BaseModel):
     session: int
