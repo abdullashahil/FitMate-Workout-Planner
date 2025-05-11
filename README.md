@@ -2,7 +2,6 @@
 # **AI Intern Assignment – FitMate Workout Plan Generator**
 
 FitMate is a web app that generates personalized workout plans, lets users track sessions, and allows exporting the plan as a PDF.
----
 
 ## 🔗 Deployed Link
 
