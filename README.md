@@ -57,7 +57,6 @@ Create a `.env` in the root of the `server` folder with your Groq API key:
 GROQ_API_KEY=your_groq_api_key
 ```
 
-> **Why?**
 > The Groq API is used to generate AI-powered workout plans. Without a valid key, plan generation will fail.
 
 ### 3. Running Locally
