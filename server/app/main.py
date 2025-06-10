@@ -7,6 +7,7 @@ from .pdf_generator import generate_pdf
 from datetime import date
 
 app = FastAPI()
+# allowed from all origins for api testing by MyFit Mantra
 origins = ["*"]
 
 # CORS
