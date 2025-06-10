@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/macbookpro/Desktop/Mywebsites/interview websites/Fit Mate/venv/bin/python3.12" "$0" "$@"
+'''exec' "/Users/macbookpro/Desktop/Mywebsites/interview websites/fitness-appointment-server/venv/bin/python3.12" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
