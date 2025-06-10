@@ -12,14 +12,30 @@ export default function Home() {
   const handleGenerate = async (data) => {
     setLoading(true);
     setError('');
+    setPlan(null);
+    
     try {
-      const response = await axios.post('https://fitmate-workout-planner.onrender.com/generate-plan', data);
+      const response = await axios.post(
+        'https://fitmate-workout-planner.onrender.com/generate-plan', 
+        data
+      );
       setPlan(response.data);
       toast.success("Workout plan generated successfully!");
     } catch (err) {
-      const message = err.response?.data?.detail || err.message;
-      setError(message);
-      toast.error(`Error: ${message}`);
+
+      try {
+        const retryResponse = await axios.post(
+          'https://fitmate-workout-planner.onrender.com/generate-plan', 
+          data
+        );
+        setPlan(retryResponse.data);
+        toast.success("Workout plan generated successfully!");
+      } catch (retryErr) {
+        // Both attempts failed
+        const message = retryErr.response?.data?.detail || retryErr.message;
+        setError(message);
+        toast.error(`Error: ${message}`);
+      }
     } finally {
       setLoading(false);
     }
