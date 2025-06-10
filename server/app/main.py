@@ -18,6 +18,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"message": "FitMate API is running!"}
+
 @app.post("/generate-plan")
 async def create_workout_plan(profile: UserProfile):
     try:

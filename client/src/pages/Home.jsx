@@ -13,7 +13,7 @@ export default function Home() {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post('http://127.0.0.1:8000/generate-plan', data);
+      const response = await axios.post('https://fitmate-workout-planner.onrender.com/generate-plan', data);
       setPlan(response.data);
       toast.success("Workout plan generated successfully!");
     } catch (err) {
