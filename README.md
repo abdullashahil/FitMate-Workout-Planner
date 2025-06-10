@@ -4,7 +4,7 @@ FitMate is a full-stack web application that generates personalized 12-session w
 
 ---
 
-## 🔗 Deployed Links
+## Deployed Links
 
 * **Frontend:** [https://fitmate-workout-planner.netlify.app](https://fitmate-workout-planner.netlify.app)
 * **Backend (FastAPI):** [https://fitmate-workout-planner.onrender.com](https://fitmate-workout-planner.onrender.com)
@@ -12,7 +12,7 @@ FitMate is a full-stack web application that generates personalized 12-session w
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 1. **AI-Generated Workout Plans**
 
@@ -33,7 +33,7 @@ FitMate is a full-stack web application that generates personalized 12-session w
 
 ---
 
-## ⚙️ Project Setup
+## Project Setup
 
 ### 1. Clone & Install
 
@@ -71,7 +71,7 @@ uvicorn main:app --reload
 
 ---
 
-## 📝 API Endpoints
+## API Endpoints
 
 ### 1. Generate Workout Plan
 
@@ -106,7 +106,7 @@ Content-Type: application/json
       "date": "2025-06-11",
       "sections": { ... }
     },
-    … 12 sessions …
+   ...
   ]
 }
 ```
@@ -124,7 +124,7 @@ Accept: application/pdf
 
 ---
 
-## 📄 Frontend Usage
+## Frontend Usage
 
 1. Fill out your profile on the landing page.
 2. Click Generate Plan to fetch your personalized plan.
