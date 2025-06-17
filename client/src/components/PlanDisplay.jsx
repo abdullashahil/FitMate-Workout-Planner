@@ -17,7 +17,7 @@ export default function PlanDisplay({ plan }) {
     setDownloading(true);
     try {
       const res = await axios.post(
-        'http://127.0.0.1:8000/download-plan',
+        'https://fitmate-workout-planner.onrender.com/download-plan', 
         plan,
         { responseType: 'blob' }
       );

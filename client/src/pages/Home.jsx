@@ -16,8 +16,7 @@ export default function Home() {
     
     try {
       const response = await axios.post(
-        // 'https://fitmate-workout-planner.onrender.com/generate-plan', 
-        'http://127.0.0.1:8000/generate-plan', 
+        'https://fitmate-workout-planner.onrender.com/generate-plan', 
         data
       );
       setPlan(response.data);
@@ -26,7 +25,7 @@ export default function Home() {
 
       try {
         const retryResponse = await axios.post(
-          'http://127.0.0.1:8000/generate-plan', 
+          'https://fitmate-workout-planner.onrender.com/generate-plan', 
           data
         );
         setPlan(retryResponse.data);
