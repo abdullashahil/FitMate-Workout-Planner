@@ -16,7 +16,8 @@ export default function Home() {
     
     try {
       const response = await axios.post(
-        'https://fitmate-workout-planner.onrender.com/generate-plan', 
+        // 'https://fitmate-workout-planner.onrender.com/generate-plan', 
+        'http://127.0.0.1:8000/generate-plan', 
         data
       );
       setPlan(response.data);
@@ -25,7 +26,7 @@ export default function Home() {
 
       try {
         const retryResponse = await axios.post(
-          'https://fitmate-workout-planner.onrender.com/generate-plan', 
+          'http://127.0.0.1:8000/generate-plan', 
           data
         );
         setPlan(retryResponse.data);
@@ -46,7 +47,7 @@ export default function Home() {
       <header className="bg-green-600 text-white py-4 shadow-md">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl font-bold">FitMate</h1>
-          <p className="text-sm opacity-80">Grok AI-Powered Personalized Workout Plans</p>
+          <p className="text-sm opacity-80">Groq AI-Powered Personalized Workout Plans</p>
         </div>
       </header>
       
